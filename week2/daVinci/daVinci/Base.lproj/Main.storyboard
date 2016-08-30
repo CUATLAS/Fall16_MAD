@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="daVinci" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leonardo da Vinci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-tj-Izc">
+                                <rect key="frame" x="152" y="32" width="297" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="a2b-Ad-sSk"/>
+                                    <constraint firstAttribute="height" constant="40" id="mJv-fU-SC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDU-IE-UUg">
+                                <rect key="frame" x="152" y="102" width="63" height="30"/>
+                                <state key="normal" title="Paintings"/>
+                                <connections>
+                                    <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JB-gX-SnJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hs-8T-wZS">
+                                <rect key="frame" x="385" y="103" width="64" height="30"/>
+                                <state key="normal" title="Drawings"/>
+                                <connections>
+                                    <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2G-C9-Re9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DaVinci" translatesAutoresizingMaskIntoConstraints="NO" id="O6b-RY-GkQ">
+                                <rect key="frame" x="80" y="173" width="440" height="598"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="598" id="hL9-sU-4py"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="leading" secondItem="BDU-IE-UUg" secondAttribute="leading" id="2z6-zI-vq0"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="trailing" secondItem="4Hs-8T-wZS" secondAttribute="trailing" id="C1W-tt-hzB"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GDO-43-haA"/>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="top" secondItem="BDU-IE-UUg" secondAttribute="bottom" constant="41" id="Lvr-O6-VBl"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="Pah-WG-xeH"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="centerX" secondItem="O6b-RY-GkQ" secondAttribute="centerX" id="Q6V-fk-iQ8"/>
+                            <constraint firstItem="BDU-IE-UUg" firstAttribute="top" secondItem="bNu-tj-Izc" secondAttribute="bottom" constant="30" id="oVF-rJ-GEY"/>
+                            <constraint firstItem="BDU-IE-UUg" firstAttribute="baseline" secondItem="4Hs-8T-wZS" secondAttribute="baseline" constant="-1" id="wRv-V1-XhD"/>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="we3-x3-Jgg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artImage" destination="O6b-RY-GkQ" id="jgf-Be-wH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DaVinci" width="146" height="199"/>
+    </resources>
+</document>
