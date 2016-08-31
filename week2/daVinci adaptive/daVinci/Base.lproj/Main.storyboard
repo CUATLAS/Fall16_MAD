@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="daVinci" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leonardo da Vinci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-tj-Izc">
+                                <rect key="frame" x="204" y="28" width="192" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DaVinci" translatesAutoresizingMaskIntoConstraints="NO" id="O6b-RY-GkQ">
+                                <rect key="frame" x="133" y="137" width="334" height="453"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="180" id="JA1-ln-Dew"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="440" id="SCZ-1N-hKh"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="598" id="cMI-Mz-y5b"/>
+                                    <constraint firstAttribute="width" secondItem="O6b-RY-GkQ" secondAttribute="height" multiplier="220:299" id="rOt-EJ-LQK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JA1-ln-Dew"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JA1-ln-Dew"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="BWr-xm-lbs">
+                                <rect key="frame" x="204" y="87" width="192" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDU-IE-UUg">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                        <state key="normal" title="Paintings"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JB-gX-SnJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hs-8T-wZS">
+                                        <rect key="frame" x="128" y="0.0" width="64" height="30"/>
+                                        <state key="normal" title="Drawings"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2G-C9-Re9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="1k8-ZA-vxI"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ws0-Vf-8V5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1k8-ZA-vxI"/>
+                                        <exclude reference="Ws0-Vf-8V5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical" baselineRelativeArrangement="NO">
+                                    <mask key="constraints">
+                                        <include reference="1k8-ZA-vxI"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BWr-xm-lbs" firstAttribute="top" secondItem="bNu-tj-Izc" secondAttribute="bottom" priority="750" constant="30" id="0md-W8-w8q"/>
+                            <constraint firstItem="BWr-xm-lbs" firstAttribute="width" secondItem="bNu-tj-Izc" secondAttribute="width" id="1pg-mr-Hwt"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6Ay-rY-yTO"/>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" constant="-20" id="AWo-9V-W1p"/>
+                            <constraint firstItem="bNu-tj-Izc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BAb-Yk-tXl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BWr-xm-lbs" secondAttribute="leading" id="ELG-Uq-TVL">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-60"/>
+                            </constraint>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="O6b-RY-GkQ" secondAttribute="bottom" constant="10" id="G4R-XI-aOG"/>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OwH-QW-aqc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="O6b-RY-GkQ" secondAttribute="bottom" constant="20" id="Pck-Z0-Z8N"/>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="top" secondItem="bNu-tj-Izc" secondAttribute="bottom" constant="30" id="QWI-ve-26S">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="O6b-RY-GkQ" firstAttribute="top" secondItem="BWr-xm-lbs" secondAttribute="bottom" constant="20" id="RbR-bF-DMj"/>
+                            <constraint firstItem="BWr-xm-lbs" firstAttribute="leading" secondItem="bNu-tj-Izc" secondAttribute="leading" id="RoI-Ll-AgX"/>
+                            <constraint firstItem="BWr-xm-lbs" firstAttribute="top" secondItem="bNu-tj-Izc" secondAttribute="bottom" constant="50" id="gj6-Ik-udf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6b-RY-GkQ" secondAttribute="trailing" constant="20" id="t6B-Yq-Agn">
+                                <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ELG-Uq-TVL"/>
+                                <exclude reference="gj6-Ik-udf"/>
+                                <exclude reference="QWI-ve-26S"/>
+                                <exclude reference="t6B-Yq-Agn"/>
+                                <exclude reference="Pck-Z0-Z8N"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0md-W8-w8q"/>
+                                <exclude reference="1pg-mr-Hwt"/>
+                                <include reference="ELG-Uq-TVL"/>
+                                <exclude reference="RoI-Ll-AgX"/>
+                                <include reference="gj6-Ik-udf"/>
+                                <exclude reference="AWo-9V-W1p"/>
+                                <exclude reference="G4R-XI-aOG"/>
+                                <exclude reference="OwH-QW-aqc"/>
+                                <include reference="QWI-ve-26S"/>
+                                <exclude reference="RbR-bF-DMj"/>
+                                <include reference="t6B-Yq-Agn"/>
+                                <include reference="Pck-Z0-Z8N"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="artImage" destination="O6b-RY-GkQ" id="jgf-Be-wH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DaVinci" width="146" height="199"/>
+    </resources>
+</document>
