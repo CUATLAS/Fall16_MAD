@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  beatles
 //
-//  Created by Aileen Pierce on 9/9/15.
+//  Created by Aileen Pierce
 //  Copyright (c) 2015 Aileen Pierce. All rights reserved.
 //
 
