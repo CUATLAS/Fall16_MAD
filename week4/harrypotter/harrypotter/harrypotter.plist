@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>characters</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Harry Potter</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Harry_Potter_(character)</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ron Weasley</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Ron_Weasley</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Hermione Granger</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Hermione_Granger</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Hagrid</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Rubeus_Hagrid</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Albus Dumbledore</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Albus_Dumbledore</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Severus Snape</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Severus_Snape</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Lord Voldemort</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Lord_Voldemort</string>
+		</dict>
+	</array>
+</dict>
+</plist>
