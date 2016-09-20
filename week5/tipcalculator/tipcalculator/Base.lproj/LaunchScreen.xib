@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculator" translatesAutoresizingMaskIntoConstraints="NO" id="2xs-aF-LXg">
+                    <rect key="frame" x="16" y="16" width="448" height="448"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="2xs-aF-LXg" secondAttribute="trailing" constant="8" id="YTu-kZ-bAZ"/>
+                <constraint firstAttribute="bottomMargin" secondItem="2xs-aF-LXg" secondAttribute="bottom" constant="8" id="eWE-C9-bia"/>
+                <constraint firstItem="2xs-aF-LXg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="8" id="gp4-rF-0mI"/>
+                <constraint firstItem="2xs-aF-LXg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="8" id="gpn-Fc-hRP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calculator" width="163" height="179"/>
+    </resources>
+</document>
