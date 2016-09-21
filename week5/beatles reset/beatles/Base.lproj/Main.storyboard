@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="beatles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beatles_abbey_road" translatesAutoresizingMaskIntoConstraints="NO" id="dib-OP-P9H">
+                                <rect key="frame" x="225" y="45" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="A93-ho-0gT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Beatles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-cA-yyY">
+                                <rect key="frame" x="255" y="233" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="f9a-Ox-3cn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AdS-4K-Oyn">
+                                <rect key="frame" x="459" y="371" width="51" height="31"/>
+                                <connections>
+                                    <action selector="updateFont:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Vml-46-QoL"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Capitalization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-4F-nxM">
+                                <rect key="frame" x="86" y="376" width="348" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="WM5-gm-UDo">
+                                <rect key="frame" x="229" y="298" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Early 60s"/>
+                                    <segment title="Late 60s"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeInfo:" destination="vXZ-lx-hvc" eventType="valueChanged" id="LTs-Hn-iW8"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5s-7b-qJs">
+                                <rect key="frame" x="86" y="446" width="20" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="16" minValue="6" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="s8L-kb-bCI">
+                                <rect key="frame" x="356" y="442" width="154" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QW9-LL-raK"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oIw-Wv-xwZ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hyr-cA-yyY" firstAttribute="top" secondItem="dib-OP-P9H" secondAttribute="bottom" constant="38" id="4ty-xH-wcA">
+                                <variation key="heightClass=compact" constant="47"/>
+                            </constraint>
+                            <constraint firstItem="WM5-gm-UDo" firstAttribute="top" secondItem="Hyr-cA-yyY" secondAttribute="bottom" constant="45" id="7w0-JZ-Ec3">
+                                <variation key="heightClass=compact" constant="-217.5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="WM5-gm-UDo" secondAttribute="centerX" id="DKH-mI-IK8">
+                                <variation key="heightClass=compact" constant="-96.5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="dib-OP-P9H" secondAttribute="centerX" id="Er7-Rg-xfN">
+                                <variation key="heightClass=compact" constant="168"/>
+                            </constraint>
+                            <constraint firstItem="AdS-4K-Oyn" firstAttribute="top" secondItem="WM5-gm-UDo" secondAttribute="bottom" constant="45" id="FMB-S5-Pi6">
+                                <variation key="heightClass=compact" constant="91"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Hyr-cA-yyY" secondAttribute="centerX" id="Fs9-m6-3bh">
+                                <variation key="heightClass=compact" constant="163.75"/>
+                            </constraint>
+                            <constraint firstItem="AdS-4K-Oyn" firstAttribute="leading" secondItem="eKD-4F-nxM" secondAttribute="trailing" constant="25" id="Ghg-hG-mac">
+                                <variation key="heightClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="AdS-4K-Oyn" firstAttribute="centerY" secondItem="eKD-4F-nxM" secondAttribute="centerY" id="HF3-AD-aCS">
+                                <variation key="heightClass=compact" constant="0.25"/>
+                            </constraint>
+                            <constraint firstItem="dib-OP-P9H" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="HPH-Nf-sC7">
+                                <variation key="heightClass=compact" constant="45"/>
+                            </constraint>
+                            <constraint firstItem="dib-OP-P9H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="45" id="Kew-uF-XQZ"/>
+                            <constraint firstItem="s8L-kb-bCI" firstAttribute="trailing" secondItem="AdS-4K-Oyn" secondAttribute="trailing" id="TvA-kE-BmY">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="eKD-4F-nxM" secondAttribute="trailing" constant="150" id="Xaf-dN-gR6"/>
+                            <constraint firstItem="O5s-7b-qJs" firstAttribute="centerY" secondItem="s8L-kb-bCI" secondAttribute="centerY" id="ewM-Vt-Bn3">
+                                <variation key="heightClass=compact" constant="3.75"/>
+                            </constraint>
+                            <constraint firstItem="O5s-7b-qJs" firstAttribute="leading" secondItem="eKD-4F-nxM" secondAttribute="leading" id="fGD-ct-teB"/>
+                            <constraint firstItem="eKD-4F-nxM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="70" id="fxf-S2-ydm">
+                                <variation key="heightClass=compact" constant="250"/>
+                            </constraint>
+                            <constraint firstItem="O5s-7b-qJs" firstAttribute="leading" secondItem="eKD-4F-nxM" secondAttribute="leading" id="jEi-T3-DF8">
+                                <variation key="heightClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstItem="s8L-kb-bCI" firstAttribute="top" secondItem="AdS-4K-Oyn" secondAttribute="bottom" constant="40" id="oUl-vY-4JP">
+                                <variation key="heightClass=compact" constant="62"/>
+                            </constraint>
+                            <constraint firstItem="dib-OP-P9H" firstAttribute="centerX" secondItem="Hyr-cA-yyY" secondAttribute="centerX" constant="-0.25" id="woh-zN-BK8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kew-uF-XQZ"/>
+                                <exclude reference="woh-zN-BK8"/>
+                                <exclude reference="fGD-ct-teB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Er7-Rg-xfN"/>
+                                <include reference="Kew-uF-XQZ"/>
+                                <include reference="woh-zN-BK8"/>
+                                <exclude reference="Fs9-m6-3bh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="beatlesImage" destination="dib-OP-P9H" id="mpW-w5-pjD"/>
+                        <outlet property="capitalSwitch" destination="AdS-4K-Oyn" id="rJT-4e-dqQ"/>
+                        <outlet property="fontSizeLabel" destination="O5s-7b-qJs" id="bFN-x0-zSm"/>
+                        <outlet property="imageControl" destination="WM5-gm-UDo" id="FRX-rA-C50"/>
+                        <outlet property="titleLabel" destination="Hyr-cA-yyY" id="RCO-In-WqA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beatles_abbey_road" width="150" height="150"/>
+    </resources>
+</document>
