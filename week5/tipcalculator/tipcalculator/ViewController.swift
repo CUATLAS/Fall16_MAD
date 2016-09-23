@@ -45,7 +45,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if numberOfPeople != nil {
             if numberOfPeople! > 0 {
                 personTotal = total / Float(numberOfPeople!)
-            }
+            }else {
+                //create a UIAlertController object
+                let alert=UIAlertController(title: "Warning", message: "The number of people must be greater than 0", preferredStyle: UIAlertControllerStyle.Alert)
+                //create a UIAlertAction object for the button
+                let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+                alert.addAction(cancelAction) //adds the alert action to the alert object
+                let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+                    self.people.text="1"
+                    self.updateTipTotals()
+                })
+                alert.addAction(okAction)
+                presentViewController(alert, animated: true, completion: nil)
+            } //end else
         }
         
         //format results as currency
@@ -67,6 +79,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
