@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Coffee constraint</string>
+    <string name="title">Coffee Shop Finder</string>
+    <string name="coffee_type">Choose your crowd</string>
+    <string name="button">Find Coffee</string>
+    <string-array name="crowd">
+        <item>popular</item>
+        <item>cycling</item>
+        <item>hipster</item>
+        <item>tea</item>
+        <item>hippie</item>
+    </string-array>
+    <string name="coffee_image">coffee cup</string>
+</resources>
