@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Coffee</string>
+    <string name="title">Coffee Shop Finder</string>
+    <string name="coffee_type">Chose your crowd</string>
+    <string name="button">Find Coffee</string>
+    <string-array name="crowd">
+        <item>popular</item>
+        <item>cycling</item>
+        <item>hipster</item>
+        <item>tea</item>
+        <item>hippie</item>
+    </string-array>
+    <string name="coffee_image">coffee cup</string>
+    <string name="suggested_coffee">This is your suggested coffee shop</string>
+</resources>
