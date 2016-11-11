@@ -21,7 +21,6 @@
         android:layout_height="60dp"
         android:id="@+id/imageButton"
         android:background="@drawable/earth"
-        android:onClick="loadWebSite"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/coffeeShopTextView"
         android:layout_alignEnd="@+id/coffeeShopTextView" />

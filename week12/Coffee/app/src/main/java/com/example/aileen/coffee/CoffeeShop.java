@@ -12,7 +12,7 @@ public class CoffeeShop {
                 break;
             case 1: //cycling
                 coffeeShop="Amante";
-                coffeeShopURL="https://www.amantecoffee.com";
+                coffeeShopURL="http://www.amantecoffee.com/";
                 break;
             case 2: //hipster
                 coffeeShop="Ozo";
