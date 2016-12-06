@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.aileen.feelings.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linear1">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/name_edit"
+        android:layout_weight="1"
+        android:ems="10"
+        android:id="@+id/nameEditText" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyToggleButton"
+        android:textOn="@string/toggle_on"
+        android:textOff="@string/toggle_off" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:id="@+id/grid_radio"
+        android:layout_marginTop="15dp">
+
+    <TextView
+        android:text="@string/yoga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yogaRadioGroup"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yoga1_radio"
+            android:id="@+id/radioButton1"
+            android:layout_marginStart="20dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yoga2_radio"
+            android:id="@+id/radioButton2"
+            android:layout_marginStart="20dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yoga3_radio"
+            android:id="@+id/radioButton3"
+            android:layout_marginStart="20dp"/>
+
+    </RadioGroup>
+
+    </GridLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid_radio"
+        android:layout_marginTop="15dp"
+        android:id="@+id/table_check">
+
+    <TableRow>
+
+    <CheckBox
+        android:text="@string/enlightened_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox1"
+        android:layout_marginStart="20dp"/>
+
+    <CheckBox
+        android:text="@string/conservative_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox2"
+        android:layout_marginStart="20dp"/>
+    </TableRow>
+
+        <TableRow>
+    <CheckBox
+        android:text="@string/sarcastic_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox3"
+        android:layout_marginStart="20dp"/>
+
+    <CheckBox
+        android:text="@string/secretive_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox4"
+        android:layout_marginStart="20dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        android:layout_below="@id/table_check"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/moods"/>
+
+        <Switch
+        android:text="@string/meditate_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+        android:id="@+id/switch1" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="@string/mood_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="findMood"
+        android:layout_below="@id/linear2"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:text="@string/feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/feelingTextView"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
